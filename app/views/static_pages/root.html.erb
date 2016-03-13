@@ -1,0 +1,24 @@
+
+    <h1>SQUIRREL CHASE </h1>
+    <div class='rules'>
+      RULES:<br>
+        1. Get acorns.<br>
+        2. Don't get squirreled.<br>
+        <br>
+      CONTROLS:<br>
+        up, down, left, right to control the dog.<br>
+        space to bark (when you have bones)<br>
+    </div>
+
+  <canvas style="background: url(/assets/grass.png)" id="game-canvas"></canvas>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <div class='highscores'>
+    HIGH SCORES
+    <br>
+    <% HighScore.top_five.each do |highscore| %>
+    <span class='name'><%= highscore.name %> </span>
+    <span class='score'><%= highscore.score.to_s %> </span>
+    <br>
+    <% end %>
+
+  </div>

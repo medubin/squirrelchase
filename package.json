@@ -1,0 +1,33 @@
+{
+  "name": "SquirrelChase",
+  "version": "1.0.0",
+  "description": "[Heroku link][heroku] **NB:** This should be a link to your production site",
+  "main": "webpack.config.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "dependencies": {
+
+    "webpack": "^1.12.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "postinstall": "./node_modules/.bin/webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/medubin/squirrelchase.git"
+  },
+  "engines": {
+    "node": "4.1.1",
+    "npm": "2.1.x"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/medubin/squirrelchase/issues"
+  },
+  "homepage": "https://github.com/medubin/squirrelchase#readme"
+}
