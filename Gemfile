@@ -47,5 +47,5 @@ end
 
 group :production do
   gem 'newrelic_rpm'
-  gem 'rails_12facto'
+  # gem 'rails_12facto'
 end
