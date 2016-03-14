@@ -934,6 +934,7 @@
 	  this.game = game;
 	  this.ctx = ctx;
 	  this.dog = this.game.dog;
+	  this.playerName = '';
 	
 	
 	
@@ -955,9 +956,9 @@
 	};
 	
 	GameView.prototype.renderLose = function () {
-	  var name = window.prompt('Enter name');
-	  while (name.length > 12) {
-	    name = window.prompt('Enter name (12 characters maximum)');
+	  if (!this.playerName) this.playerName = window.prompt('Enter name');
+	  while (this.playerName.length > 12) {
+	    this.playerName = window.prompt('Enter name (12 characters maximum)');
 	  }
 	  this.postScore(name,function(){});
 	  var gameOverLoop = setInterval(function() {
@@ -1020,23 +1021,25 @@
 	  }
 	  if (key.isPressed('enter')) {
 	    if (this.game.state === 'over') {
-	      this.game.numSquirrels = 2;
-	      this.game.dimX = 1000;
-	      this.game.dimY = 600;
-	      this.game.squirrels = [];
-	      this.game.acorns = [];
-	      this.game.bushes = [];
-	      this.game.bones = [];
-	      this.game.points = 0;
-	      this.game.barkvalue = 0;
-	      this.game.addBushes();
-	      this.game.state = 'start';
-	
-	      this.dog.direct = 0;
-	      this.dog.lives = 1;
-	      this.dog.bones = 0;
-	      this.dog.vel = [0,0];
-	      this.dog.pos = [this.game.dimX/2, this.game.dimY/2];
+	      this.game = new Game(2);
+	      this.dog = this.game.dog;
+	      // this.game.numSquirrels = 2;
+	      // this.game.dimX = 1000;
+	      // this.game.dimY = 600;
+	      // this.game.squirrels = [];
+	      // this.game.acorns = [];
+	      // this.game.bushes = [];
+	      // this.game.bones = [];
+	      // this.game.points = 0;
+	      // this.game.barkvalue = 0;
+	      // this.game.addBushes();
+	      // this.game.state = 'start';
+	      //
+	      // this.dog.direct = 0;
+	      // this.dog.lives = 1;
+	      // this.dog.bones = 0;
+	      // this.dog.vel = [0,0];
+	      // this.dog.pos = [this.game.dimX/2, this.game.dimY/2];
 	
 	
 	    }
