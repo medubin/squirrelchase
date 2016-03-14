@@ -960,7 +960,7 @@
 	  while (this.playerName.length > 12) {
 	    this.playerName = window.prompt('Enter name (12 characters maximum)');
 	  }
-	  this.postScore(name,function(){});
+	  this.postScore(this.playerName,function(){});
 	  var gameOverLoop = setInterval(function() {
 	    this.ctx.fillStyle = 'black';
 	    this.ctx.rect(0,0,this.game.dimX,this.game.dimY + 50);
