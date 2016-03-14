@@ -6,15 +6,15 @@ In Squirrel Chase you play as a dog with an insatiable appetite for acorns, but 
 Pick up acorns to score points and bones to get access to the squirrel stunning bark ability!
 
 ##Controls:
--Up: Accelerate forwards
--Down: Accelerate backwards
--Left: Turn left
--Right: Turn right
--Space: bark
+- Up: Accelerate forwards
+- Down: Accelerate backwards
+- Left: Turn left
+- Right: Turn right
+- Space: bark
 
 
 ##Languages and Technologies:
--Javascript
--JQuery
--Canvas
--HTML and CSS
+- Javascript
+- JQuery
+- Canvas
+- HTML and CSS
