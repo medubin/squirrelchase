@@ -131,4 +131,4 @@ end
 ![Stunned Squirrels](/readme_photos/squirrels-stunned.png)
 
 ###Game over
-![Game Over](/readme_photos/game_over.png)
+![Game Over](/readme_photos/game-over.png)
