@@ -8,8 +8,6 @@ var Utils = {
     Surrogate.prototype = ParentClass.prototype;
     ChildClass.prototype = new Surrogate;
     ChildClass.prototype.constructor = ChildClass;
-
-
   },
 
   randomVect: function (length) {

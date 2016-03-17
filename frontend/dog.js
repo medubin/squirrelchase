@@ -75,7 +75,6 @@ Dog.prototype.relocate = function () {
 Dog.prototype.MAX_VELOCITY = 10;
 
 Dog.prototype.power = function (impulse) {
-
   tickCount += 1;
   var xVel = impulse * Math.cos(this.direct) + this.vel[0];
   var yVel = impulse * Math.sin(this.direct) + this.vel[1];
