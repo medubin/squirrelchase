@@ -446,16 +446,7 @@
 	    var deltaY = pos[1] - this.pos[1];
 	    var deltaX = pos[0] - this.pos[0];
 	    var angleInRadians = Math.atan2(deltaY, deltaX);
-	    // if (utils.distanceBetween(pos, this.pos) > 150) this.turn(angleInRadians);
-	    // if (utils.distanceBetween(pos, this.pos) < 150) this.turn(-angleInRadians);
-	    // this.turn(Math.random() * Math.PI * 2);
-	    if (this.game.barkvalue > 0) {
-	      if (utils.distanceBetween(pos, this.pos) > 200) this.turn(angleInRadians);
-	      if (utils.distanceBetween(pos, this.pos) < 200) this.turn(-angleInRadians);
-	    } else {
-	      this.turn(angleInRadians);
-	
-	    }
+	    this.turn(angleInRadians);
 	};
 	
 	Squirrel.prototype.turn = function (angle) {
@@ -503,8 +494,6 @@
 	    Surrogate.prototype = ParentClass.prototype;
 	    ChildClass.prototype = new Surrogate;
 	    ChildClass.prototype.constructor = ChildClass;
-	
-	
 	  },
 	
 	  randomVect: function (length) {
@@ -684,7 +673,6 @@
 	Dog.prototype.MAX_VELOCITY = 10;
 	
 	Dog.prototype.power = function (impulse) {
-	
 	  tickCount += 1;
 	  var xVel = impulse * Math.cos(this.direct) + this.vel[0];
 	  var yVel = impulse * Math.sin(this.direct) + this.vel[1];

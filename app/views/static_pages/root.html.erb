@@ -13,12 +13,24 @@
   <canvas style="background: url(/assets/grass.png)" id="game-canvas"></canvas>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <div class='highscores'>
-    HIGH SCORES
+    HIGHSCORES:
     <br>
-    <% HighScore.top_five.each do |highscore| %>
+    ALL TIME
+    <br>
+    <% HighScore.top_ten.each do |highscore| %>
     <span class='name'><%= highscore.name %> </span>
     <span class='score'><%= highscore.score.to_s %> </span>
     <br>
     <% end %>
+    <br>
+    SCORES
+    <br>
+    <% HighScore.daily_five.each do |highscore| %>
+    <span class='name'><%= highscore.name %> </span>
+    <span class='score'><%= highscore.score.to_s %> </span>
+    <br>
+    <% end %>
+
+
 
   </div>
