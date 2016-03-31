@@ -8,6 +8,6 @@ class HighScore < ActiveRecord::Base
   end
 
   def self.daily_five
-    HighScore.where('created_at BETWEEN ? AND ?', DateTime.now.beginning_of_day, DateTime.now.end_of_day).limit(5)
+    HighScore.where('created_at BETWEEN ? AND ?', DateTime.now.beginning_of_day, DateTime.now.end_of_day).order(score: :desc).limit(5)
   end
 end
